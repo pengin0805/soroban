@@ -78,6 +78,7 @@
 .texts {
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 .text {
   background-color: #ccd5ae;
