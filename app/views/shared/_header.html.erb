@@ -1,14 +1,15 @@
 <div class="header">
   <div class="logo_name">
     <i class="fas fa-calculator fa-lg my_logo"></i>
-    <a href="#">そろばん</a>
+    <%= link_to 'そろばん', root_path, class: "logo_name_right" %>
   </div>
   <div class="user">
-    <div class="log_in">
-      <a href="#">ログイン</a>
-    </div>
-    <div class="sign_up">
-      <a href="#">無料会員登録</a>
-    </div>
+    <% if user_signed_in? %>
+      <span class="user_name"><%= current_user.nickname %></span>
+      <%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "log_out" %>
+    <% else %>
+      <%= link_to 'ログイン',new_user_session_path, class: "log_in" %>
+      <%= link_to '無料会員登録',new_user_registration_path, class: "sign_up" %>
+    <% end %>
   </div>
 </div>
