@@ -57,7 +57,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  text-shadow: 0 0 5px white;
+  text-shadow: 0 0 10px white;
 
 }
 .main_image_a {
