@@ -1,6 +1,11 @@
-<h2>Log in</h2>
+<div class="header">
+  <div class="logo_name">
+    <i class="fas fa-calculator fa-lg my_logo"></i>
+    <%= link_to 'そろばん', root_path, class: "logo_name_right" %>
+  </div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
