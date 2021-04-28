@@ -13,9 +13,9 @@
   <body>
     <%= render "shared/header"%> 
     <div class="issue">
-      <%= link_to "学習する", {controller: "texts", action: "show", name: "times_table",id:1} %>
       <h1 class="times_table_title">掛け算<h1>
       <P class="times_table_info">声に出して覚えよう</p>
+      <%= link_to "ドリル", {controller: "texts", action: "show", name: "times_table",id:1} %>
       <div class="issue_row">
         <%# <form method="post"> %>
         <%# <input type="text" size="5" maxlengh="2"></td> %>
