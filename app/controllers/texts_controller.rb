@@ -3,6 +3,6 @@ class TextsController < ApplicationController
   end
 
   def show
-    render partial: "studies/#{params[:name]}"
+    render partial: "studies/#{params[:name]+params[:id]}"
   end
 end
