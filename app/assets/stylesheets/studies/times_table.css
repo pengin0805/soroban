@@ -1,0 +1,31 @@
+.issue {
+  width: 100vw;
+  padding-top: 120px;
+}
+.times_table_title {
+  width: 150px;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid #587d71;
+}
+.issue p {
+  padding-top: 20px;
+  width: 300px;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+.issue_row {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.table {
+  margin:10px ;
+  font-size: 20px;
+}
+td,tr {
+  padding:10px;
+}
+
