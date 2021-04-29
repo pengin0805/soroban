@@ -3,7 +3,7 @@ class TextsController < ApplicationController
   end
 
   def study
-    @time_table = TimeTable.all
+    @time_table = Multiplication.order("RAND()").limit(3)
     render partial: "studies/#{params[:name]+params[:id]}" and return
   end
   
