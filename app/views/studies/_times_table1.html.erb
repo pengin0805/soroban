@@ -19,13 +19,13 @@
       <div class="issue_row">
         <%= form_with do |f| %>
         <table border="3" width="250" height="80" class="table" >
-          <tr align="center"><td>問題</td><td>回答</td></tr>
+          <tr align="center"><td>問題</td><td>回答</td><td>結果</td></tr>
           <% @time_table.each do |time_table|%>
           <tr align="center" >
             <td><%= time_table.name %></td>
             <%= f.hidden_field :answer, value: time_table.answer %>
             <td><%= f.text_field :user_answer,class: "user_answer", size: 5, maxlengh: "2" %></td>
-            <td class="hidden">○</td>
+            <td><span class="hidden_passing">○</span><span class="hidden_failure">✗</span></td>
           </tr>
           <% end %>
         </table>
