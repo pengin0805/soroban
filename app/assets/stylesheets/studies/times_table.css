@@ -1,0 +1,43 @@
+.issue {
+  width: 100vw;
+  padding-top: 120px;
+}
+.times_table_title {
+  width: 150px;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px solid #587d71;
+}
+.issue p {
+  padding: 20px 0;
+  width: 300px;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+.issue a {
+  width: 100px;
+  padding: 10px;
+  color: #2a2b2a;
+  border: 1px solid #ccd5ae;
+  text-decoration: none;
+  background-color: #ccd5ae;
+  border-radius: 25px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+.issue_row {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.table {
+  margin:10px ;
+  font-size: 20px;
+}
+td,tr {
+  padding:10px;
+}
+

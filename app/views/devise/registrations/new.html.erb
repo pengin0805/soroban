@@ -6,7 +6,6 @@
   </div>
 </div>
 
-<div class="form_wrap">
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
   <%= render "devise/shared/error_messages", resource: f.object %>
 
@@ -52,6 +51,5 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-</div>
 
 <%# <%= render "devise/shared/links" %>

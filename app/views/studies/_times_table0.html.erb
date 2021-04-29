@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soroban</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "shared/header"%> 
+    <div class="issue">
+      <h1 class="times_table_title">掛け算<h1>
+      <P class="times_table_info">声に出して覚えよう</p>
+      <%= link_to "ドリル", {controller: "texts", action: "show", name: "times_table",id:1} %>
+      <div class="issue_row">
+        <%# <form method="post"> %>
+        <%# <input type="text" size="5" maxlengh="2"></td> %>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>1の段</td></tr>
+          <tr align="center" ><td>1 × 1 = 1</tr>
+          <tr align="center" ><td>1 × 2 = 2</td></tr>
+          <tr align="center" ><td>1 × 3 = 3</td></tr>
+          <tr align="center" ><td>1 × 4 = 4</td></tr>
+          <tr align="center" ><td>1 × 5 = 5</td></tr>
+          <tr align="center" ><td>1 × 6 = 6</td></tr>
+          <tr align="center" ><td>1 × 7 = 7</td></tr>
+          <tr align="center" ><td>1 × 8 = 8</td></tr>
+          <tr align="center" ><td>1 × 9 = 9</td></tr>
+        </table>
+        <%# </form> %>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>2の段</td></tr>
+          <tr align="center" ><td>2 × 1 = 2</td></tr>
+          <tr align="center" ><td>2 × 2 = 4</td></tr>
+          <tr align="center" ><td>2 × 3 = 6</td></tr>
+          <tr align="center" ><td>2 × 4 = 8</td></tr>
+          <tr align="center" ><td>2 × 5 = 10</td></tr>
+          <tr align="center" ><td>2 × 6 = 12</td></tr>
+          <tr align="center" ><td>2 × 7 = 14</td></tr>
+          <tr align="center" ><td>2 × 8 = 16</td></tr>
+          <tr align="center" ><td>2 × 9 = 18</td></tr>
+        </table>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>3の段</td></tr>
+          <tr align="center" ><td>3 × 1 = 3</td></tr>
+          <tr align="center" ><td>3 × 2 = 6</td></tr>
+          <tr align="center" ><td>3 × 3 = 9</td></tr>
+          <tr align="center" ><td>3 × 4 = 12</td></tr>
+          <tr align="center" ><td>3 × 5 = 15</td></tr>
+          <tr align="center" ><td>3 × 6 = 18</td></tr>
+          <tr align="center" ><td>3 × 7 = 21</td></tr>
+          <tr align="center" ><td>3 × 8 = 24</td></tr>
+          <tr align="center" ><td>3 × 9 = 27</td></tr>
+        </table>  
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>4の段</td></tr>
+          <tr align="center" ><td>4 × 1 = 4</td></tr>
+          <tr align="center" ><td>4 × 2 = 8</td></tr>
+          <tr align="center" ><td>4 × 3 = 12</td></tr>
+          <tr align="center" ><td>4 × 4 = 16</td></tr>
+          <tr align="center" ><td>4 × 5 = 20</td></tr>
+          <tr align="center" ><td>4 × 6 = 24</td></tr>
+          <tr align="center" ><td>4 × 7 = 28</td></tr>
+          <tr align="center" ><td>4 × 8 = 32</td></tr>
+          <tr align="center" ><td>4 × 9 = 36</td></tr>
+        </table>  
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>5の段</td></tr>
+          <tr align="center" ><td>5 × 1 = 5</td></tr>
+          <tr align="center" ><td>5 × 2 = 10</td></tr>
+          <tr align="center" ><td>5 × 3 = 15</td></tr>
+          <tr align="center" ><td>5 × 4 = 20</td></tr>
+          <tr align="center" ><td>5 × 5 = 25</td></tr>
+          <tr align="center" ><td>5 × 6 = 30</td></tr>
+          <tr align="center" ><td>5 × 7 = 35</td></tr>
+          <tr align="center" ><td>5 × 8 = 40</td></tr>
+          <tr align="center" ><td>5 × 9 = 45</td></tr>
+        </table>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>6の段</td></tr>
+          <tr align="center" ><td>6 × 1 = 6</td></tr>
+          <tr align="center" ><td>6 × 2 = 12</td></tr>
+          <tr align="center" ><td>6 × 3 = 18</td></tr>
+          <tr align="center" ><td>6 × 4 = 24</td></tr>
+          <tr align="center" ><td>6 × 5 = 30</td></tr>
+          <tr align="center" ><td>6 × 6 = 36</td></tr>
+          <tr align="center" ><td>6 × 7 = 42</td></tr>
+          <tr align="center" ><td>6 × 8 = 48</td></tr>
+          <tr align="center" ><td>6 × 9 = 54</td></tr>
+        </table>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>7の段</td></tr>
+          <tr align="center" ><td>7 × 1 = 7</td></tr>
+          <tr align="center" ><td>7 × 2 = 14</td></tr>
+          <tr align="center" ><td>7 × 3 = 21</td></tr>
+          <tr align="center" ><td>7 × 4 = 28</td></tr>
+          <tr align="center" ><td>7 × 5 = 35</td></tr>
+          <tr align="center" ><td>7 × 6 = 42</td></tr>
+          <tr align="center" ><td>7 × 7 = 49</td></tr>
+          <tr align="center" ><td>7 × 8 = 56</td></tr>
+          <tr align="center" ><td>7 × 9 = 63</td></tr>
+        </table>
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>8の段</td></tr>
+          <tr align="center" ><td>8 × 1 = 8</td></tr>
+          <tr align="center" ><td>8 × 2 = 16</td></tr>
+          <tr align="center" ><td>8 × 3 = 24</td></tr>
+          <tr align="center" ><td>8 × 4 = 32</td></tr>
+          <tr align="center" ><td>8 × 5 = 40</td></tr>
+          <tr align="center" ><td>8 × 6 = 48</td></tr>
+          <tr align="center" ><td>8 × 7 = 56</td></tr>
+          <tr align="center" ><td>8 × 8 = 64</td></tr>
+          <tr align="center" ><td>8 × 9 = 72</td></tr>
+        </table>  
+        <table border="3" width="200" height="80" class="table" >
+          <tr align="center"><td>9の段</td></tr>
+          <tr align="center" ><td>9 × 1 = 9</td></tr>
+          <tr align="center" ><td>9 × 2 = 18</td></tr>
+          <tr align="center" ><td>9 × 3 = 27</td></tr>
+          <tr align="center" ><td>9 × 4 = 36</td></tr>
+          <tr align="center" ><td>9 × 5 = 44</td></tr>
+          <tr align="center" ><td>9 × 6 = 54</td></tr>
+          <tr align="center" ><td>9 × 7 = 63</td></tr>
+          <tr align="center" ><td>9 × 8 = 72</td></tr>
+          <tr align="center" ><td>9 × 9 = 81</td></tr>
+        </table>  
+      </div>
+    </div>
+  </body>
+</html>

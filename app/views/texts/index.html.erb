@@ -11,22 +11,32 @@
       <li class="text">
         <div class="text_name">九九を覚えよう</div>
         <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <a href="#">学習する</a>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "times_table",id:0 } %>
       </li>
       <li class="text">
         <div class="text_name">そろばんの使い方</div>
         <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <a href="#">学習する</a>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "how_to_use",id:0 } %>
       </li>
       <li class="text">
-        <div class="text_name">練習問題8級</div>
+        <div class="text_name">足し算</div>
         <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <a href="#">学習する</a>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "addition",id:0 } %>
       </li>
       <li class="text">
-        <div class="text_name">練習問題7級</div>
+        <div class="text_name">掛け算</div>
         <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <a href="#">学習する</a>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "multiplication",id:0 } %>
+      </li>
+      <li class="text">
+        <div class="text_name">割り算</div>
+        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "division",id:0 } %>
+      </li>
+      <li class="text">
+        <div class="text_name">練習問題【8級】</div>
+        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+        <%= link_to "学習する", {controller: "texts", action: "show", name: "practice8",id:0 } %>
       </li>
     </ul>
   </div>
