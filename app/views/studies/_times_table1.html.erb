@@ -24,7 +24,7 @@
           <tr align="center" >
             <td><%= time_table.formula %></td>
             <%= f.hidden_field :answer, value: time_table.answer %>
-            <td><%= f.text_field :user_answer,class: "user_answer", size: 5, maxlengh: "2" %></td>
+            <td><%= f.text_field :user_answer,class: "user_answer", size: 5, maxlengh: "2", autocomplete: "off" %></td>
             <td><span class="hidden_passing">○</span><span class="hidden_failure">✗</span></td>
           </tr>
           <% end %>
