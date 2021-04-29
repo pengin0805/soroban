@@ -22,14 +22,14 @@
           <tr align="center"><td>問題</td><td>回答</td><td>結果</td></tr>
           <% @time_table.each do |time_table|%>
           <tr align="center" >
-            <td><%= time_table.name %></td>
+            <td><%= time_table.formula %></td>
             <%= f.hidden_field :answer, value: time_table.answer %>
             <td><%= f.text_field :user_answer,class: "user_answer", size: 5, maxlengh: "2" %></td>
             <td><span class="hidden_passing">○</span><span class="hidden_failure">✗</span></td>
           </tr>
           <% end %>
         </table>
-          <%= f.submit "答え合わせ",id: "result" %>
+          <%= f.submit "答え合わせ",id: "result"%>
         <% end %>
       </div>
     </div>
