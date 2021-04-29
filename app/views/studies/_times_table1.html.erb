@@ -1,1 +1,37 @@
-<h1>頑張る</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soroban</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "shared/header"%> 
+    <div class="issue">
+      <h1 class="times_table_title">掛け算<h1>
+      <P class="times_table_info">声に出して覚えよう</p>
+      <%= link_to "ドリル", {controller: "texts", action: "study", name: "times_table",id:1} %>
+      <div class="issue_row">
+        <%= form_with do |f| %>
+        <table border="3" width="250" height="80" class="table" >
+          <tr align="center"><td>問題</td><td>回答</td><td>結果</td></tr>
+          <% @time_table.each do |time_table|%>
+          <tr align="center" >
+            <td><%= time_table.formula %></td>
+            <%= f.hidden_field :answer, value: time_table.answer %>
+            <td><%= f.text_field :user_answer,class: "user_answer", size: 5, maxlengh: "2" %></td>
+            <td><span class="hidden_passing">○</span><span class="hidden_failure">✗</span></td>
+          </tr>
+          <% end %>
+        </table>
+          <%= f.submit "答え合わせ",id: "result"%>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>

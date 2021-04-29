@@ -1,0 +1,2 @@
+class Multiplication < ApplicationRecord
+end

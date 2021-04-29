@@ -2,7 +2,9 @@ class TextsController < ApplicationController
   def index
   end
 
-  def show
-    render partial: "studies/#{params[:name]+params[:id]}"
+  def study
+    @time_table = Multiplication.order("RAND()").limit(3)
+    render partial: "studies/#{params[:name]+params[:id]}" and return
   end
+  
 end

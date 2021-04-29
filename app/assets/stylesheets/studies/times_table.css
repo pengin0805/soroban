@@ -40,4 +40,7 @@
 td,tr {
   padding:10px;
 }
+.hidden_passing,.hidden_failure {
+  display:none ;
+}
 
