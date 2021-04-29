@@ -31,3 +31,9 @@
 ### Association
 - belongs_to  :user
 
+## multiplications テーブル
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| formula            | string | null: false |
+| answer             | integer| null: false |
+
