@@ -13,9 +13,8 @@
   <body>
     <%= render "shared/header"%> 
     <div class="issue">
-      <h1 class="times_table_title">掛け算<h1>
-      <P class="times_table_info">声に出して覚えよう</p>
-      <%= link_to "ドリル", {controller: "texts", action: "study", name: "times_table",id:1} %>
+      <h1 class="times_table_title">ドリル<h1>
+      <P class="times_table_info">問題は毎回変わるよ！</p>
       <div class="issue_row">
         <%= form_with do |f| %>
         <table border="3" width="250" height="80" class="table" >
@@ -33,5 +32,18 @@
         <% end %>
       </div>
     </div>
+      <table class="calendar_table">
+        <% @calendar_data.each do |date| %>
+          <% if date.wday == 0 %>
+            <tr>
+          <% end %>
+          <td class="hidden_table" id=<%=date%> >
+            <%= date.day %>
+          </td>
+          <% if date.wday == 6 %>
+          </tr>
+          <% end %>
+        <% end %>
+      </table>
   </body>
 </html>
