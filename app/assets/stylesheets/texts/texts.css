@@ -74,9 +74,20 @@
 .main_heading_name {
   font-size: 25px;
   text-align: center;
-  margin:0px auto;
+  margin:0 auto;
   border-bottom: 1px solid #587d71;
-  width: 150px;
+  width: 200px;
+}
+.date {
+  margin-top: 20px;
+  text-align: center;
+}
+.calendar_table{
+  background-color: #fafafa;
+  margin: 0 auto 20px;
+}
+.calendar_table td {
+  color: darkgray;
 }
 .texts {
   display: flex;
@@ -112,5 +123,4 @@
   height: 150px;
   padding: 20px;
 }
-
 

@@ -32,15 +32,19 @@
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 .table {
-  margin:10px ;
+  margin:10px;
   font-size: 20px;
 }
 td,tr {
   padding:10px;
 }
 .hidden_passing,.hidden_failure {
+  display:none ;
+}
+.hidden_table {
   display:none ;
 }
 

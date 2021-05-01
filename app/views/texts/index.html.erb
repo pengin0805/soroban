@@ -6,39 +6,65 @@
     <span class="main_title">そろばんで<br>計算力を鍛えよう</span>
   </div>
   <div class="main_texts">
-    <h1 class="main_heading_name">学習内容一覧<h1>
-    <ul class="texts">
-      <li class="text">
-        <div class="text_name">九九を覚えよう</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "times_table",id:0 } %>
-      </li>
-      <li class="text">
-        <div class="text_name">そろばんの使い方</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "how_to_use",id:0 } %>
-      </li>
-      <li class="text">
-        <div class="text_name">足し算</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "addition",id:0 } %>
-      </li>
-      <li class="text">
-        <div class="text_name">掛け算</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "multiplication",id:0 } %>
-      </li>
-      <li class="text">
-        <div class="text_name">割り算</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "division",id:0 } %>
-      </li>
-      <li class="text">
-        <div class="text_name">練習問題【8級】</div>
-        <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
-        <%= link_to "学習する", {controller: "texts", action: "study", name: "practice8",id:0 } %>
-      </li>
-    </ul>
+    <div class="calendar">
+      <h1 class="main_heading_name">学習カレンダー<h1>
+      <table class="calendar_table">
+      <p class="date"><%= @today.strftime("< %Y年 %-m月 >") %></p>
+        <tr class="week">
+          <% t('date.abbr_day_names').each do |day_name| %>
+            <td class="week">
+              <%= day_name %>
+            </td>
+          <% end %>
+        </tr>
+        <% @calendar_data.each do |date| %>
+          <% if date.wday == 0 %>
+            <tr>
+          <% end %>
+          <td id=<%=date%> >
+            <%= date.day %>
+          </td>
+          <% if date.wday == 6 %>
+          </tr>
+          <% end %>
+        <% end %>
+      </table>
+    </div>
+    <div class="texts_index">
+      <h1 class="main_heading_name">学習内容一覧<h1>
+      <ul class="texts">
+        <li class="text">
+          <div class="text_name">九九を覚えよう</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "times_table",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name">そろばんの使い方</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "how_to_use",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name">足し算</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "addition",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name">掛け算</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "multiplication",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name">割り算</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "division",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name">練習問題【8級】</div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "practice8",id:0 } %>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 

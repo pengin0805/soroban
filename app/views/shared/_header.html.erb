@@ -1,7 +1,7 @@
 <div class="header">
   <div class="logo_name">
     <i class="fas fa-calculator fa-lg my_logo"></i>
-    <%= link_to 'そろばん', root_path, class: "logo_name_right" %>
+    <%= link_to 'そろばん', root_path, data: {"turbolinks" => false},class: "logo_name_right" %>
   </div>
   <div class="user">
     <% if user_signed_in? %>
