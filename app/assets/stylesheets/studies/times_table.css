@@ -47,4 +47,9 @@ td,tr {
 .hidden_table {
   display:none ;
 }
-
+.answer {
+  margin-bottom: 20px;
+}
+.change {
+  margin-top: 30px;
+}
