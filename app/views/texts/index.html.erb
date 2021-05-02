@@ -34,32 +34,42 @@
       <h1 class="main_heading_name">学習内容一覧<h1>
       <ul class="texts">
         <li class="text">
-          <div class="text_name">九九を覚えよう</div>
+          <div class="text_name"><%= @text.find(1).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "times_table",id:0 } %>
         </li>
         <li class="text">
-          <div class="text_name">そろばんの使い方</div>
+          <div class="text_name"><%= @text.find(2).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "how_to_use",id:0 } %>
         </li>
         <li class="text">
-          <div class="text_name">足し算</div>
+          <div class="text_name"><%= @text.find(3).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "addition",id:0 } %>
         </li>
         <li class="text">
-          <div class="text_name">掛け算</div>
+          <div class="text_name"><%= @text.find(4).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "multiplication",id:0 } %>
         </li>
         <li class="text">
-          <div class="text_name">割り算</div>
+          <div class="text_name"><%= @text.find(5).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "division",id:0 } %>
         </li>
         <li class="text">
-          <div class="text_name">練習問題【8級】</div>
+          <div class="text_name"><%= @text.find(6).text_name %></div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "practice8",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name"><%= @text.find(7).text_name %></div>
+          <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: "practice8",id:0 } %>
+        </li>
+        <li class="text">
+          <div class="text_name"><%= @text.find(8).text_name %></div>
           <img src="assets/Kids Studying from Home-pana.png" alt="画像" class="text_image"><br>
           <%= link_to "学習する", {controller: "texts", action: "study", name: "practice8",id:0 } %>
         </li>
