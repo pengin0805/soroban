@@ -1,5 +1,6 @@
 class TextsController < ApplicationController
   def index
+    @text = Text.all
     @today = Date.today
     from_date = Date.new(@today.year, @today.month, @today.beginning_of_month.day).beginning_of_week(:sunday)
     to_date = Date.new(@today.year, @today.month, @today.end_of_month.day)
