@@ -21,7 +21,7 @@
 ### Association
 - has_one  :card
 
-## texts テーブル
+## cards テーブル
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | card_token         | string | null: false |
