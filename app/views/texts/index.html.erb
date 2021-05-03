@@ -47,7 +47,7 @@
         <li class="text">
           <div class="text_name"><%= text.text_name %></div>
           <%= image_tag text.image, alt: "画像", class: "text_image" %><br>
-          <%= link_to "学習する", {controller: "texts", action: "study", name: text.link,id:0 } %>
+          <%= link_to "学習する", {controller: "texts", action: "study", name: text.text_link,id:0 } %>
         </li>
       <% end %>
       </ul>
