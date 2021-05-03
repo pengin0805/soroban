@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_04_29_093216) do
     t.string "text_name", null: false
     t.text "text_info", null: false
     t.string "text_class"
+    t.string "link"
+    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
