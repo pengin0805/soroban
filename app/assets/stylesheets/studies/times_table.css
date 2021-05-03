@@ -17,12 +17,12 @@
   text-align: center;
 }
 .issue a {
-  width: 100px;
+  width: 150px;
   padding: 10px;
-  color: #2a2b2a;
-  border: 1px solid #ccd5ae;
+  color: #faedcd;
+  border: 1px solid #c96480;
   text-decoration: none;
-  background-color: #ccd5ae;
+  background-color: #c96480;
   border-radius: 25px;
   display: block;
   text-align: center;
