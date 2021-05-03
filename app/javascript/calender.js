@@ -2,7 +2,7 @@ window.addEventListener('load',function(){
   if(localStorage.getItem("date")){
   const before = localStorage.getItem("date");
   const before_set = document.getElementById(before+"");
-  before_set.setAttribute("bgcolor","red");
+  before_set.setAttribute("bgcolor","#e6c0e9");
   }
 
   const today = new Date();
@@ -13,7 +13,7 @@ window.addEventListener('load',function(){
   const button = document.getElementById("result");
 
   button.addEventListener("click",() => {
-  const color = set.setAttribute("bgcolor","red");
+  const color = set.setAttribute("bgcolor","#e6c0e9");
   localStorage.setItem("date",year+"-"+("0"+month).slice(-2)+"-"+("0"+date).slice(-2));
   })
 })
