@@ -21,4 +21,18 @@ class CardsController < ApplicationController
     end
   end
 
+  def plan
+    redirect_to new_card_path and return unless current_user.card.present?
+
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    customer_token = current_user.card.customer_token
+    Payjp::Charge.create(
+      amount: 300,
+      customer: customer_token,
+      currency: 'jpy'
+    )
+    redirect_to root_path
+  end
+
+
 end

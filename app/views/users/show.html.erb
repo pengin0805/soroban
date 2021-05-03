@@ -22,6 +22,7 @@
     <%= @card[:exp_year] %>
     <%# 有効期限の「年」を取得 %>
   </div>
+  <%= link_to '購入する',plan_cards_path %>
   <% else %>
     <%= link_to "クレジットカードの登録", new_card_path %>
   <% end %>
