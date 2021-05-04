@@ -1,4 +1,4 @@
-lock 'capistrano (3.16.0)'
+lock '3.16.0'
 set :application, 'soroban'
 set :repo_url,  'git@github.com:pengin0805/soroban.git'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
