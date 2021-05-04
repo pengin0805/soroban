@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: soroban_production
-  username: soroban
-  password: <%= ENV['SOROBAN_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql.sock
