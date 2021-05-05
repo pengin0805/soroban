@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soroban</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "shared/header"%>
+    <div class="lesson">
+      <h2>足し算を学ぼう！</h2>
+      <p>＜8級レベルの足し算だよ＞</p>
+      <p>　4 + 2 + 9 をする問題を下の動画を見ながらはじいてみよう</p>
+
+      <table border="3" class="table_addition">
+        <thead>
+        <tr><td>No.</td><td width="100px" align="center">1</td></tr>
+        </thead>
+        <tbody>
+        <tr><td>1</td><td align="right" class="num">4</td></tr>
+        <tr><td>2</td><td align="right" class="num">2</td></tr>
+        <tr><td>3</td><td align="right" class="num">9</td></tr>
+        </tbody>
+        <tfoot>
+        <tr><td>計</td><td align="right" class="num"></td></tr>
+        </tfoot>
+      </table>
+      <%= video_tag("/videos/addition.mov",controls: true, muted: true, class: "soroban_how_to") %>
+    </div>
+  </body>
+</html>
+
