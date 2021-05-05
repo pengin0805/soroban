@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'texts/search'
   resources :cards, only: [:new, :create] do
     collection do
-      get :plan
+      get :pay, :cancel
     end
   end
   resources :users, only: [:show, :update]

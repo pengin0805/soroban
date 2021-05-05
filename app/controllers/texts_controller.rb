@@ -1,6 +1,7 @@
 class TextsController < ApplicationController
 
   before_action :authenticate_user!, except: [:index]
+  before_action :move_to_show, only: :study
   before_action :search_product, only: [:index, :search]
 
   def index
@@ -26,8 +27,15 @@ class TextsController < ApplicationController
 
   private
 
+  def move_to_show
+    unless current_user.premium
+      redirect_to user_path
+    end
+  end
+
   def search_product
     @p = Text.ransack(params[:q])
   end
   
+
 end

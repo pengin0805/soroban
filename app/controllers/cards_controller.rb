@@ -24,15 +24,45 @@ class CardsController < ApplicationController
   def plan
     redirect_to new_card_path and return unless current_user.card.present?
 
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
-    customer_token = current_user.card.customer_token
-    Payjp::Charge.create(
-      amount: 300,
-      customer: customer_token,
+    Payjp::Plan.create(
+      amount: 50,
+      interval: 'month',
+      billing_day: 27,
       currency: 'jpy'
     )
+  end
+
+  def pay
+    card = Card.where(user_id: current_user.id).first
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    subscription = Payjp::Subscription.create(
+      customer: card.customer_token,
+      plan: plan,
+      metadata: {user_id: current_user.id}
+    )
+    current_user.update(subscription_id: subscription.id, premium: true)
     redirect_to root_path
   end
+
+  def cancel
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+    subscription = Payjp::Subscription.retrieve(current_user.subscription_id)
+    subscription.cancel
+    current_user.update(premium: false)
+    redirect_to root_path
+    end
+  # def plan
+  #   redirect_to new_card_path and return unless current_user.card.present?
+
+  #   Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+  #   customer_token = current_user.card.customer_token
+  #   Payjp::Charge.create(
+  #     amount: 300,
+  #     customer: customer_token,
+  #     currency: 'jpy'
+  #   )
+  #   redirect_to root_path
+  # end
 
 
 end
