@@ -40,7 +40,8 @@ class CardsController < ApplicationController
       plan: plan,
       metadata: {user_id: current_user.id}
     )
-    current_user.update(subscription_token: subscription.id, premium: true)
+    current_user.update(subscription_id: subscription.id, premium: true)
+
     redirect_to root_path
   end
 

@@ -15,7 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :subscription_token
       t.boolean :premium, default: false, null: false
       # Recoverable
-      t.string   :reset_password_token
+      t.string   :reset_password_id
       t.datetime :reset_password_sent_at
 
       ## Rememberable
