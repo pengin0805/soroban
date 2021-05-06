@@ -34,11 +34,11 @@
       <br>
       支払日：毎月27日
       <br>
-      <% if current_user && current_user.premium? %>
+      <%# <% if current_user && current_user.premium? %> 
         <%= link_to '退会する',cancel_cards_path %>
-      <% else %>
+      <%# <% else %> 
         <%= link_to '購入する',pay_cards_path %>
-      <% end %>
+      <%# <% end %> 
     </div>
   </div>
   <div class="Account__info">
