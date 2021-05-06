@@ -12,5 +12,15 @@
 
   <body>
     <%= render "shared/header"%>
+    <div class="lesson">
+      <h2>かけ算を学ぼう！</h2>
+      <p>＜8級レベルのかけ算だよ＞</p>
+      <p>5 × 56 をする問題を下の動画を見ながらやってみよう</p>
+
+      <%= video_tag("/videos/multiplication.mov",controls: true, muted: true, class: "soroban_how_to") %>
+    </div>
+  </body>
+
+
   </body>
 </html>
