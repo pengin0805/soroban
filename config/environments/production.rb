@@ -3,6 +3,10 @@ Rails.application.configure do
   ActionCable.server.config.disable_request_forgery_protection = true
   config.action_cable.url = "ws://54.15095.73/cable" 
   config.action_cable.allowed_request_origins = ['http://54.15095.73']
+
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://heroku-35236.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://heroku.herokuapp.com', 'http://heroku-35236.herokuapp.com']
   # Code is not reloaded between requests.
   config.cache_classes = true
 
