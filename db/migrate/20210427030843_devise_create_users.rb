@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-      t.string :subscription_id
+      t.string :subscription_token
       t.boolean :premium, default: false, null: false
       # Recoverable
       t.string   :reset_password_token
