@@ -30,6 +30,7 @@ https://soroban-35236.herokuapp.com/
 九九は3問のドリル形式になっています。<br>
 答えを入力して、＜答え合わせ＞を押すと◯✕判定されます。<br>
 ＜問題を変える＞を押すと、問題が変わります。
+Javascriptを用いて、入力された答えとデータベースにある答えが一致しているかを判定できるようにしました。
 
 ### 【そろばんのたし算】
 [![Image from Gyazo](https://i.gyazo.com/9b0dfed7332dc3f44f809faa4e701a0c.gif)](https://gyazo.com/9b0dfed7332dc3f44f809faa4e701a0c)
@@ -38,20 +39,17 @@ https://soroban-35236.herokuapp.com/
 ## ②カレンダー
 [![Image from Gyazo](https://i.gyazo.com/d08aef8f74ff2f128fae615333af615a.png)](https://gyazo.com/d08aef8f74ff2f128fae615333af615a)
 ドリルを行った日にカレンダーの日付が水色に塗られます。<br>
-毎日の学習を習慣づける（カレンダーの日付に色を塗りたい？）ための機能です。
+毎日の学習を習慣づけるための機能です。<br>
+Javascriptを用いて、ドリルの回答ボタンを押したタイミングでカレンダーの今日の日付に色が付くように実装しました。
 
 ## ③検索機能
 [![Image from Gyazo](https://i.gyazo.com/98708e831a3379b791726e34c11f5744.gif)](https://gyazo.com/98708e831a3379b791726e34c11f5744)
-学習内容の一覧をプルダウン形式で表示して、目的の学習内容を探しやすくしています。
+Ransackを用いて学習内容の一覧をプルダウン形式で表示して、目的の学習内容を探しやすくしています。
 
 ## ④定期購入機能
 [![Image from Gyazo](https://i.gyazo.com/508fb4ecd3903ac7b92506923e97ba2e.gif)](https://gyazo.com/508fb4ecd3903ac7b92506923e97ba2e)
-クレジットカードを用いて、アプリケーションを利用するための定期購入（¥50/月）を実装しました。
+PayjpのAPIを用いて、クレジットカードでアプリケーションを利用するための定期購入（¥50/月）を実装しました。
 
-# 課題
-・カレンダーのドリル実施日の色付けが、1日分しか保存できていないです。<br>
-　localStorageに同じ変数で複数の値を保存（配列？）できるように修正します。<br>
-・ユーザー毎に保存の値をかえられていないため、変えられるようにします。(cookie?)<br>
 　
 # DB設計
 ## texts テーブル
