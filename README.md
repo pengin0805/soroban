@@ -9,6 +9,7 @@ soroban-35236
 https://soroban-35236.herokuapp.com/
 
 ### Basic認証
+※現在、Basic認証を非表示にしています。
 ・ユーザー名：pengin
 ・パスワード：1111
 
